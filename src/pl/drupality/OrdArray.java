@@ -86,7 +86,6 @@ public class OrdArray {
         int upperBound = this.nElems - 1;
 
         int currIndex;
-        long oldValue;
 
         while(true) {
             currIndex = (lowerBound + upperBound) / 2;
@@ -102,11 +101,11 @@ public class OrdArray {
             }
         }
 
-        for(int j = currIndex; j < nElems;) {
-            a[j + 1] = a[j++];
+        for(int i = nElems - 1; i > currIndex; i--) {
+            a[i + 1] = a[i];
         }
 
-        a[currIndex] = value;
+        a[currIndex + 1] = value;
         nElems++;
     }
 

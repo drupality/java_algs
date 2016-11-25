@@ -6,7 +6,7 @@ package pl.drupality;
 public class OrdArrayMain {
 
     public static void main(String[] args) {
-        OrdArray array = new OrdArray(20);
+        OrdArray array = new OrdArray(25);
         array.linearInsert(22);
         array.linearInsert(11);
         array.linearInsert(45);
@@ -31,6 +31,18 @@ public class OrdArrayMain {
         System.out.println(array);
 
         array.binaryInsert(28);
+
+        System.out.println(array);
+
+        array.binaryInsert(61);
+
+        System.out.println(array);
+
+        array.binaryInsert(2);
+
+        System.out.println(array);
+
+        array.binaryInsert(101);
 
         System.out.println(array);
 
