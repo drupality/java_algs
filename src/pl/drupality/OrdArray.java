@@ -101,11 +101,21 @@ public class OrdArray {
             }
         }
 
-        for(int i = nElems - 1; i > currIndex; i--) {
-            a[i + 1] = a[i];
+        int targetIndex;
+
+        if (a[currIndex] > value) {
+            targetIndex = currIndex;
+        } else {
+            targetIndex = ++currIndex;
         }
 
-        a[currIndex + 1] = value;
+        int i = nElems;
+
+        while(i > currIndex) {
+                a[i] = a[--i];
+        }
+
+        a[targetIndex] = value;
         nElems++;
     }
 
