@@ -26,6 +26,5 @@ public class BubbleSorter extends Sorter {
         int temp = arrayToSort[one];
         arrayToSort[one] = arrayToSort[two];
         arrayToSort[two] = temp;
-
     }
 }

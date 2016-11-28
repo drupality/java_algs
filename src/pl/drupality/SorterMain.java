@@ -17,8 +17,8 @@ public class SorterMain {
 
         System.out.println(array);
 
-        Sorter bubbleSorter = new BubbleSorter();
-        bubbleSorter.sort(array);
+        Sorter sorter = new SelectionSorter();
+        sorter.sort(array);
 
         System.out.println(array);
 

@@ -112,7 +112,7 @@ public class OrdArray {
         int i = nElems;
 
         while(i > currIndex) {
-                a[i] = a[--i];
+            a[i] = a[--i];
         }
 
         a[targetIndex] = value;
@@ -192,7 +192,6 @@ public class OrdArray {
                 merged.linearInsert(val2);
             }
         }
-
         return merged;
     }
 
