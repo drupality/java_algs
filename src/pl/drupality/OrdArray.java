@@ -83,7 +83,7 @@ public class OrdArray {
 
     public void binaryInsert(long value) {
         int lowerBound = 0;
-        int upperBound = this.nElems - 1;
+        int upperBound = nElems - 1;
 
         int currIndex;
 
@@ -94,7 +94,7 @@ public class OrdArray {
                 break;
             } else {
                 if (a[currIndex] < value) {
-                    lowerBound = currIndex + 1; //it's in upper half
+                    lowerBound = currIndex + 1;
                 } else {
                     upperBound = currIndex - 1;
                 }
@@ -153,6 +153,45 @@ public class OrdArray {
 
         this.nElems--;
         return  true;
+    }
+
+    public OrdArray merge(OrdArray arr1) {
+        int arr1Size = arr1.numOfElements();
+        int arr2Size = this.numOfElements();
+        int mergedSize = arr1Size + arr2Size;
+        OrdArray merged = new OrdArray(mergedSize);
+
+        for (int i = 0; i < mergedSize; i++) {
+            int currentSize = i + 1;
+            long val1 = 0;
+            long val2 = 0;
+
+            if (arr1Size >= currentSize) {
+                val1 = arr1.getValueAt(i);
+            }
+
+            if (arr2Size >= currentSize) {
+                val2 = this.getValueAt(i);
+            }
+
+            if (val1 > 0) {
+                merged.linearInsert(val1);
+            }
+
+            if (val2 > 0) {
+                merged.linearInsert(val2);
+            }
+        }
+
+        return merged;
+    }
+
+    public long getValueAt(int index) {
+        return a[index];
+    }
+
+    public long[] getArray() {
+        return a;
     }
 
     public int numOfElements() {

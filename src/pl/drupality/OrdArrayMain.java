@@ -46,5 +46,22 @@ public class OrdArrayMain {
 
         System.out.println(array);
 
+
+        System.out.println("\nMerging example\n");
+
+        OrdArray ord2 = new OrdArray(5);
+        ord2.linearInsert(124);
+        ord2.linearInsert(3);
+        ord2.linearInsert(75);
+
+        OrdArray ord3 = new OrdArray(3);
+        ord3.linearInsert(7);
+        ord3.linearInsert(101);
+        ord3.linearInsert(66);
+
+        OrdArray merged = ord2.merge(ord3);
+
+        System.out.println(merged);
+
     }
 }
