@@ -6,9 +6,8 @@ package pl.drupality;
 public class BubbleSorter extends Sorter {
 
     @Override
-    public HighArray sort(HighArray highArray) {
+    public void sort(HighArray highArray) {
         int[] arrayToSort = highArray.getArray();
-
         int out, in;
 
         for(out = highArray.getSize() - 1 ; out > 1; out--) {
@@ -18,8 +17,6 @@ public class BubbleSorter extends Sorter {
                 }
             }
         }
-
-        return highArray;
     }
 
     private void swap(int[] arrayToSort, int one, int two) {

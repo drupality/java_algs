@@ -17,7 +17,7 @@ public class SorterMain {
 
         System.out.println(array);
 
-        Sorter sorter = new SelectionSorter();
+        Sorter sorter = new InsertionSorter();
         sorter.sort(array);
 
         System.out.println(array);

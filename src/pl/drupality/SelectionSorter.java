@@ -5,7 +5,7 @@ package pl.drupality;
  */
 class SelectionSorter extends Sorter {
     @Override
-    public HighArray sort(HighArray highArray) {
+    public void sort(HighArray highArray) {
         int out, in, min;
         int[] array = highArray.getArray();
 
@@ -18,7 +18,6 @@ class SelectionSorter extends Sorter {
             }
             swap(array, out, min);
         }
-        return null;
     }
 
     private void swap(int[] arrayToSort, int one, int two) {
