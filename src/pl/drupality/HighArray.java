@@ -82,6 +82,10 @@ public class HighArray {
         return currentMax;
     }
 
+    public int[] getArray() {
+        return a;
+    }
+
     public int getSize() {
         return nElems;
     }
