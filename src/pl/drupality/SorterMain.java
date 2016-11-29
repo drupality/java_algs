@@ -17,13 +17,10 @@ public class SorterMain {
 
         System.out.println(array);
 
-        Sorter sorter = new InsertionSorter();
+        Sorter sorter = new BubbleSorter();
         sorter.sort(array);
 
         System.out.println(array);
-
-
-
     }
 
 }

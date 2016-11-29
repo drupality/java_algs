@@ -21,7 +21,7 @@ public class BubbleSorterMain {
 
 
         Instant start = Instant.now();
-        sorter.sort(array);
+        sorter.bidirectionalSort(array);
         Instant end = Instant.now();
         System.out.println(Duration.between(start, end)); // p
 
